@@ -47,6 +47,8 @@ end
 Add following code to `config/environments/***.rb`.
 
 ```ruby
+require 'logstash-logger'
+
 if ENV['RAILS_LOG_TO_STDOUT'].present?
   logger           = LogStashLogger.new(type: :stdout)
   logger.formatter = config.log_formatter
