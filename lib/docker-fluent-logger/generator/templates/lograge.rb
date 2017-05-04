@@ -1,3 +1,5 @@
+require 'lograge'
+
 Rails.application.configure do
   config.lograge.logger = ActiveSupport::Logger.new(STDOUT)
   config.lograge.enabled = true
