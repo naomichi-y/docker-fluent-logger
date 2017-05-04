@@ -1,3 +1,3 @@
-require 'docker/fluent/logger'
+require 'docker-fluent-logger'
 
-Docker::Fluent::Logger::CLI.start
+DockerFluentLogger::CLI.start

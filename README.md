@@ -1,4 +1,4 @@
-# Docker::Fluent::Logger
+# DockerFluentLogger
 
 @TODO
 

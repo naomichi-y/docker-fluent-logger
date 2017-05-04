@@ -2,11 +2,11 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'docker/fluent/logger/version'
+require 'docker-fluent-logger/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'docker-fluent-logger'
-  spec.version       = Docker::Fluent::Logger::VERSION
+  spec.version       = DockerFluentLogger::VERSION
   spec.authors       = ['naomichi-y']
   spec.email         = ['n.yamakita@gmail.com']
 
