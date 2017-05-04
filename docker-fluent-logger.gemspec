@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Transfer docker log to Flutend'
   spec.description   = 'Transfer utiltity for docker log to Fluentd'
   spec.homepage      = 'https://github.com/naomichi-y/docker_log_to_fluentd'
-  spec.licenses      = ['MIT']
+  spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
