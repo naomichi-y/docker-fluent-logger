@@ -1,4 +1,5 @@
 require 'docker/fluent/logger/version'
+require 'docker/fluent/logger/cli'
 
 module Docker
   module Fluent

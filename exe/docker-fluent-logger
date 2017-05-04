@@ -1,1 +1,3 @@
-puts 'OK'
+require 'docker/fluent/logger'
+
+Docker::Fluent::Logger::CLI.start
