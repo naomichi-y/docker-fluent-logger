@@ -54,7 +54,7 @@ if ENV['RAILS_LOG_TO_STDOUT'].present?
 end
 ```
 
-When using [ECS Deployer](https://github.com/naomichi-y/ecs_deployer), Enable `RAILS_LOG_TO_STDOUT` in  `config/deploy/***.yml`.
+When using [ECS Deployer](https://github.com/naomichi-y/ecs_deployer), Add `RAILS_LOG_TO_STDOUT` variable to `config/deploy/***.yml`.
 
 ```yaml
 environment:
