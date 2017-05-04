@@ -47,7 +47,19 @@ end
 Add following code to `config/environments/***.rb`.
 
 ```ruby
-config.log_formatter = DockerFluentLogger::Formatter::Json.new
+if ENV['RAILS_LOG_TO_STDOUT'].present?
+  logger           = LogStashLogger.new(type: :stdout)
+  logger.formatter = config.log_formatter
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
+end
+```
+
+Enable `RAILS_LOG_TO_STDOUT` in `config/deploy/***.yml`.
+
+```yaml
+environment:
+  - name: RAILS_LOG_TO_STDOUT
+    value: enabled
 ```
 
 ## License
