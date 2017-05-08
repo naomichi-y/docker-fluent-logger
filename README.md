@@ -55,10 +55,8 @@ end
 Add following code to `config/environments/***.rb`.
 
 ```ruby
-require 'logstash-logger'
-
 if ENV['RAILS_LOG_TO_STDOUT'].present?
-  config.logger = LogStashLogger.new(type: :stdout)
+  config.logger = DockerFluentLogger.create
 end
 ```
 

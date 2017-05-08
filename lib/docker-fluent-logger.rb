@@ -1,6 +1,9 @@
 require 'docker-fluent-logger/version'
 require 'docker-fluent-logger/cli'
+require 'logstash-logger'
 
 module DockerFluentLogger
-  # Your code goes here...
+  def create
+    LogStashLogger.new(type: :stdout)
+  end
 end
