@@ -50,9 +50,7 @@ Add following code to `config/environments/***.rb`.
 require 'logstash-logger'
 
 if ENV['RAILS_LOG_TO_STDOUT'].present?
-  logger           = LogStashLogger.new(type: :stdout)
-  logger.formatter = config.log_formatter
-  config.logger = ActiveSupport::TaggedLogging.new(logger)
+  config.logger = LogStashLogger.new(type: :stdout)
 end
 ```
 
