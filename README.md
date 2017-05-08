@@ -33,6 +33,8 @@ create config/initializers/lograge.rb
 Add following code to `app/controller/application_controller.rb`.
 
 ```ruby
+rescue_from Exception, with: :render_500 unless Rails.env.production?
+
 def append_info_to_payload(payload)
   super
 
@@ -41,6 +43,12 @@ def append_info_to_payload(payload)
   payload[:referer]  = request.referer
   payload[:remote_ip] = request.remote_ip
   payload[:user_agent] = request.user_agent
+end
+
+def render_500(e = nil)
+  logger.fatal(e.to_s + ' ' + e.backtrace.to_s)
+
+  ...
 end
 ```
 
