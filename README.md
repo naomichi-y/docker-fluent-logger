@@ -47,6 +47,8 @@ end
 Add following code to `config/environments/***.rb`.
 
 ```ruby
+require 'logstash-logger'
+
 if ENV['RAILS_LOG_TO_STDOUT'].present?
   logger           = LogStashLogger.new(type: :stdout)
   logger.formatter = config.log_formatter
@@ -54,7 +56,7 @@ if ENV['RAILS_LOG_TO_STDOUT'].present?
 end
 ```
 
-Enable `RAILS_LOG_TO_STDOUT` in `config/deploy/***.yml`.
+When using [ECS Deployer](https://github.com/naomichi-y/ecs_deployer), Add `RAILS_LOG_TO_STDOUT` variable to `config/deploy/***.yml`.
 
 ```yaml
 environment:
