@@ -1,5 +1,4 @@
 require 'lograge'
-require 'logstash-logger'
 
 Rails.application.configure do
   config.lograge.logger = ActiveSupport::Logger.new(STDOUT)
