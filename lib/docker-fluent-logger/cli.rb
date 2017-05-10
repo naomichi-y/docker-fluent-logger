@@ -6,6 +6,7 @@ module DockerFluentLogger
     def install
       current_dir = Pathname(File.dirname(__FILE__))
 
+      # lograte.rb
       src_path = current_dir.join('generator', 'templates', 'lograge.rb')
       dest_path = Pathname('config').join('initializers', 'lograge.rb')
 

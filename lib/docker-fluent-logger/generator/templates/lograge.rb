@@ -15,6 +15,8 @@ Rails.application.configure do
       user_agent: event.payload[:user_agent]
     }
 
+    data[:session_id] = event.payload[:session_id] if event.payload[:session_id].present?
+
     if event.payload[:exception]
       e = event.payload[:exception_object]
       data[:exception_class] = e.class.to_s
