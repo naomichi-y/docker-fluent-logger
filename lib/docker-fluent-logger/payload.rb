@@ -8,7 +8,7 @@ module DockerFluentLogger
       payload[:referer]  = request.referer
       payload[:remote_ip] = request.remote_ip
       payload[:user_agent] = request.user_agent
-      payload[:session] = session.id if session.present?
+      payload[:session_id] = session.id if session.present?
     end
   end
 end
