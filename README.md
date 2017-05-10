@@ -33,14 +33,14 @@ create config/initializers/lograge.rb
 Add following code to `app/controller/application_controller.rb`.
 
 ```ruby
-include DockerFluentLogger::Payload
+class ApplicationController < ActionController::Base
+  include DockerFluentLogger::Payload
 
-rescue_from Exception, with: :render_500 unless Rails.env.production?
+  rescue_from Exception, with: :render_500 unless Rails.env.production?
 
-def render_500(e = nil)
-  logger.fatal(e.to_s + ' ' + e.backtrace.to_s)
-
-  ...
+  def render_500(e = nil)
+    logger.fatal(e.to_s + ' ' + e.backtrace.to_s)
+  end
 end
 ```
 
