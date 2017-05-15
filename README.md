@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   rescue_from Exception, with: :render_500 if Rails.env.production?
 
   def render_500(e = nil)
-    logger.fatal(e.to_s + ' ' + e.backtrace.to_s)
+    append_payload_error(e) if e.present?
   end
 end
 ```
