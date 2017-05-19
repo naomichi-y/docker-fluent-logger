@@ -30,7 +30,7 @@ $ bundle exec docker-fluent-logger install
 create config/initializers/lograge.rb
 ```
 
-Add following code to `app/controller/application_controller.rb`.
+Add following code to `app/controllers/application_controller.rb`.
 
 ```ruby
 class ApplicationController < ActionController::Base
