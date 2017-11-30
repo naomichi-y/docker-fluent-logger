@@ -8,7 +8,7 @@ module DockerFluentLogger
     def append_info_to_payload(payload)
       super
 
-      payload[:@timestamp] = Time.now.utc.strftime('%Y-%m-%dT%X%z').insert(22, ':')
+      payload[:@timestamp] = Time.now.utc
       payload[:uuid] = request.uuid
       payload[:url] = request.url
       payload[:referer]  = request.referer
