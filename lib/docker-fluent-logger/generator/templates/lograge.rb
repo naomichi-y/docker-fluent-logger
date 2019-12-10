@@ -8,7 +8,8 @@ Rails.application.configure do
 
   config.lograge.custom_options = lambda do |event|
     data = {
-      hostname: Socket.gethostname,
+      timestamp: event.payload[:timestamp],
+      hostname: event.payload[:hostname],
       uuid: event.payload[:uuid],
       url: event.payload[:url],
       remote_ip: event.payload[:remote_ip],
