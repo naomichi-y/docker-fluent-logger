@@ -13,7 +13,7 @@ module DockerFluentLogger
     logger.formatter = proc do |severity, datetime, progname, message|
       data = {
         severity: severity,
-        datetime: datetime.utc.iso8601(6),
+        timestamp: datetime.utc.iso8601(6),
         message: message
       }
       data[:progname] = progname unless progname.nil?

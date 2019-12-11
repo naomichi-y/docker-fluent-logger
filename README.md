@@ -39,7 +39,7 @@ Following log is output.
 ```
 {
   "severity": "INFO",
-  "datetime": "2019-12-11T12:19:01.599089Z",
+  "timestamp": "2019-12-11T12:19:01.599089Z",
   "message": "example"
 }
 ```
