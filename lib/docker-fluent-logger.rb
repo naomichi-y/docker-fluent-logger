@@ -13,9 +13,10 @@ module DockerFluentLogger
         datetime: datetime,
         message: message
       }
-      data["progname"] = progname unless progname.nil?
+      data[:progname] = progname unless progname.nil?
       data.to_json
     end
+
     logger
   end
 end
