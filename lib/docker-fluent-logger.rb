@@ -1,5 +1,7 @@
-require 'logger'
 require 'json'
+require 'logger'
+require 'oj'
+
 require 'docker-fluent-logger/cli'
 require 'docker-fluent-logger/payload'
 require 'docker-fluent-logger/version'
@@ -14,7 +16,7 @@ module DockerFluentLogger
         message: message
       }
       data[:progname] = progname unless progname.nil?
-      data.to_json
+      "#{Oj.dump(data, mode: :compat)}\n"
     end
 
     logger
