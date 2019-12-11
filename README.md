@@ -2,7 +2,7 @@
 
 Output Rails log to JSON format.
 
-# e.g.
+## e.g.
 
 HTTP request outputs following log to STDOUT.
 
@@ -31,12 +31,11 @@ Rails logger also output logs in JSON as well.
 
 ```
 logger.info('example')
-
 # Or
-
 DockerFluentLogger.create.info('example')
 ```
 
+Following log is output.
 ```
 {
   "severity": "INFO",
