@@ -9,10 +9,11 @@ require 'docker-fluent-logger/version'
 module DockerFluentLogger
   def self.create
     logger = Logger.new(STDOUT)
+
     logger.formatter = proc do |severity, datetime, progname, message|
       data = {
         severity: severity,
-        datetime: datetime,
+        datetime: datetime.iso8601,
         message: message
       }
       data[:progname] = progname unless progname.nil?
