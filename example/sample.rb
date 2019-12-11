@@ -1,4 +1,5 @@
 require 'bundler/setup'
 require 'docker-fluent-logger'
 
-DockerFluentLogger.create
+logger = DockerFluentLogger.create
+logger.info('example');

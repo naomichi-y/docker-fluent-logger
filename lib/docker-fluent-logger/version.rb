@@ -1,3 +1,3 @@
 module DockerFluentLogger
-  VERSION = '0.0.11'.freeze
+  VERSION = '1.0.0'.freeze
 end
