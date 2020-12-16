@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    docker-fluent-logger (1.0.0)
+    docker-fluent-logger (1.0.1)
       activesupport (>= 5.0.0)
       lograge (~> 0.5)
       oj (~> 3.10.0)
@@ -51,7 +51,7 @@ GEM
     minitest (5.14.2)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
-    oj (3.10.16)
+    oj (3.10.17)
     parallel (1.19.1)
     parser (2.6.5.0)
       ast (~> 2.4.0)
